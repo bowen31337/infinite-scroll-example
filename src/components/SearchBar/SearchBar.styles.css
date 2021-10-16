@@ -3,7 +3,15 @@
   display: flex;
   padding: 0 15px;
 }
-
+.search label {
+  display: flex;
+  flex:1;
+  flex-direction: column;
+}
+.search label .warning{
+  margin:0;
+  color:red;
+}
 .searchTerm {
   border: 3px solid #00b4cc;
   border-right: none;
@@ -12,7 +20,6 @@
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9dbfaf;
-  flex: 1;
 }
 
 .searchTerm:focus {
@@ -43,7 +50,7 @@
 .results {
   max-height: 80vh;
   overflow-y: auto;
-  margin: 30px auto;
+  margin: 10px auto;
   padding: 10px;
 }
 

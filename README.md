@@ -7,7 +7,9 @@
 - No 3rd party UI dependencies or Tool sets.
 - Typescript.
 - Custom hooks.
-- scaffolded by CRA
+- Unit tests for hooks.
+- scaffolded by CRA.
+- Github Page.
 
 
 # How to use

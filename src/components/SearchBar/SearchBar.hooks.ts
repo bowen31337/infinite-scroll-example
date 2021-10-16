@@ -15,11 +15,9 @@ export const useSearchBar = () => {
 
     try {
       const res = await fetch(
-        `https://www.omdbapi.com/?s=${value}&apikey=${process.env.REACT_APP_API_KEY}&page=${page}`
+        `${process.env.REACT_APP_API_URL}?s=${value}&apikey=${process.env.REACT_APP_API_KEY}&page=${page}`
       );
       const data: SearchResponse = await res.json();
-      // const { data }: { data: SearchResponse } = await res.json();
-      console.log(data);
       const { Response, Search, Error: errorMsg } = data;
       if (Response !== "True") {
         throw new Error(errorMsg);

@@ -12,10 +12,9 @@ export const useMovie = (movieId: string) => {
       setErrorMsg("");
       try {
         const res = await fetch(
-          `https://www.omdbapi.com/?i=${movieId}&apikey=${process.env.REACT_APP_API_KEY}`
+          `${process.env.REACT_APP_API_URL}?i=${movieId}&apikey=${process.env.REACT_APP_API_KEY}`
         );
         const data: Movie = await res.json();
-        console.log(data);
         const { Response, Error: errorMsg , ...others} = data;
         if (Response !== "True") {
           throw new Error(errorMsg);
