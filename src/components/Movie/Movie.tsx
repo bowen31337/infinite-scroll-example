@@ -43,17 +43,17 @@ const OmdbMovie = () => {
       <section>
         <h2>{movie.Title}</h2>
         <h3>{movie.Plot}</h3>
-        <p>Type: {movie.Type}</p>
-        <p>Year: {movie.Year}</p>
-        <p>Released: {movie.Released}</p>
-        <p>DVD: {movie.DVD}</p>
-        <p>Actors: {movie.Actors}</p>
-        <p>Director: {movie.Director}</p>
-        <p>Genre: {movie.Genre}</p>
-        {movie.Awards !== "N/A" && <p>Awards: {movie.Awards}</p>}
-        <p>BoxOffice: {movie.BoxOffice}</p>
-        <p>Country: {movie.Country}</p>
-        <p>Language: {movie.Language}</p>
+        <p><b>Type</b>: {movie.Type}</p>
+        <p><b>Year</b>: {movie.Year}</p>
+        <p><b>Released</b>: {movie.Released}</p>
+        {movie.DVD && <p><b>DVD</b>: {movie.DVD}</p>}
+        <p><b>Actors</b>: {movie.Actors}</p>
+        {movie.Director !=='N/A' && <p><b>Director</b>: {movie.Director}</p>}
+        <p><b>Genre</b>: {movie.Genre}</p>
+        {movie.Awards !== "N/A" && <p><b>Awards</b>: {movie.Awards}</p>}
+        {movie.BoxOffice && <p><b>BoxOffice</b>: {movie.BoxOffice}</p>}
+        <p><b>Country</b>: {movie.Country}</p>
+        <p><b>Language</b>: {movie.Language}</p>
       </section>
     </article>
   );
