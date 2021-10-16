@@ -20,6 +20,7 @@
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9dbfaf;
+  margin:0;
 }
 
 .searchTerm:focus {
@@ -36,6 +37,9 @@
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*Resize the wrap to see the search bar change!*/
