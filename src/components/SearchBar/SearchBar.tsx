@@ -8,7 +8,7 @@ import "./SearchBar.styles.css";
 const MIN_NUM_CHAR = 4;
 
 const SearchBar = () => {
-  const { search, isLoading, errorMsg, results, page, setPage } =
+  const { search, isLoading, errorMsg, results, page, setPage, setErrorMsg } =
     useSearchBar();
   const [inputValue, setInputValue] = React.useState<string>("");
   const [validInput, setValidInput] = React.useState<boolean>(true);
@@ -54,6 +54,7 @@ const SearchBar = () => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setInputValue(e.target?.value);
               setValidInput(e.target?.value.length >= MIN_NUM_CHAR);
+              setErrorMsg('')
             }}
             value={inputValue}
             placeholder="Search Movie Name"

@@ -40,6 +40,7 @@ export const useSearchBar = () => {
     results,
     page,
     setPage,
+    setErrorMsg
   };
 };
 
